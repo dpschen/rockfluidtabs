@@ -1,0 +1,21 @@
+{
+  "name": "rockfluidtabs",
+  "description": "Buttery smooth tabs with velocity",
+  "main": "js/rockFluidTabs.js",
+  "authors": [
+    "Dominik Pschenitschni (https://pschen.de)"
+  ],
+  "homepage": "https://rockfluidtabs.pschen.de",
+  "keywords": [
+    "tabs",
+    "fluid",
+    "smooth",
+    "velocity",
+    "jquery"
+  ],
+  "license": "GPL-3.0",
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ]
+}
