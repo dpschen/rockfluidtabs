@@ -1,0 +1,162 @@
+/*
+	rockFluidTabs
+	by Dominik Pschenitschni http://pschen.de
+
+	based on Organic Tabs by Chris Coyier http://css-tricks.com
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 14px / 1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+a { text-decoration: none; }
+
+a:focus { outline: 0; }
+
+p { font-size: 15px; margin: 0 0 40px 0; }
+p a {
+	color: #08a8ce;
+}
+p a:hover {
+	border-bottom: 1px solid #08a8ce;
+}
+#page-wrap {
+	max-width: 800px;
+	padding: 0 40px;
+	margin: 40px auto;
+}
+
+h1 { font-size: 40px;
+	font-weight: normal;
+	margin: 0 0 20px 0;
+}
+
+/* Generic Utility */
+.hide { display: none; }
+
+
+/* Specific to example one */
+
+.example-one {
+	background: #eee;
+	padding: 10px;
+	margin-bottom: 40px;
+}
+
+.example-one .nav {
+	overflow: hidden;
+	margin: 0 0 10px 0;
+	display: flex;
+}
+.example-one .nav li {
+	margin: 0 10px 0 0;
+	flex: 1;
+}
+.example-one .nav li:last-child { margin-right: 0; }
+.example-one .nav a {
+	display: block;
+	padding: 0 5px;
+	background: #959290;
+	color: white;
+	font-size: 12px;
+	text-align: center;
+	border: 0;
+	text-transform: uppercase;
+	transition: all .2s ease-out;
+}
+.example-one .nav a:hover { background-color: #131f25; }
+
+.example-one ul { list-style: none; }
+.example-one ul a {
+	display: block;
+	border-top: 1px solid #959290;
+	padding: 0 10px;
+	color: #666;
+	line-height: 34px;
+	transition: all .2s ease;
+}
+.example-one ul li:first-child a { border: none; }
+
+.example-one ul a:hover {
+	background: #f36a4a;
+	border-color: #f36a4a;
+	color: white;
+}
+.example-one ul li:hover +
+li a {
+	border-color: #f36a4a;
+}
+
+.example-one .nav .current,
+.example-one .nav .current:hover {
+	background-color: #08a8ce;
+	cursor: default;
+	color: white;
+}
+
+
+
+/* Specific to example two */
+
+.example-two .tab-wrap {
+	background: #eee;
+	padding: 10px;
+	margin: 0 0 40px 0;
+}
+
+.example-two ul {
+	list-style: none;
+}
+.example-two ul a {
+	display: block;
+	border-bottom: 1px solid #666;
+	padding: 4px;
+	color: #666;
+}
+
+
+.example-two .nav {
+	overflow: hidden;
+	display: flex;
+}
+.example-two .nav li {
+	margin: 0 10px 0 0;
+	flex: 1;
+}
+.example-two .nav li.last {
+	margin-right: 0;
+}
+.example-two .nav a {
+	display: block;
+	padding: 10px;
+	background: #666;
+	color: white;
+	font-size: 12px;
+	text-align: center;
+	border: 0;
+	text-transform: uppercase;
+}
+
+.example-two .nav li a:hover {
+	background: #999;
+}
+
+.example-two .nav li a.current,
+.example-two .nav li a.current:hover {
+	background-color: #eee;
+	color: black;
+	cursor: default;
+}
+
+.example-two ul a:hover {
+	background: #333;
+	color: white;
+}
+.example-two ul li:last-child a {
+	border: none;
+}
