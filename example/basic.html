@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>rockFluidTabs - Simple Example</title>
+
+	<!-- Minimalistic general styles-->
+	<style>
+		body {
+			font: 15px / 1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+			margin: 0 auto;
+			max-width: 520px;
+			color: #463C33;
+			background: #DFCEB4;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	</style>
+
+	<!-- Minimalistic tab styles-->
+	<style>
+		.example .nav {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+		.example .nav li {
+			flex: 1;
+			margin-left: 10px;
+		}
+		.example .nav li:first-child {
+			margin-left: 0;
+		}
+		.example .nav a {
+			display: block;
+			color: #fff;
+			background: #999;
+			text-align: center;
+			padding: 10px;
+			font-weight: bold;
+			transition: all .2s ease;
+		}
+		.example .nav .current {
+			background: #eee;
+			color: #666;
+		}
+		.example .tab-wrap { background: #eee; }
+		.example .tab-wrap div { padding: 20px; }
+	</style>
+</head>
+<body>
+
+	<h1>rockFluidTabs</h1>
+
+	<h2>Buttery smooth tabs animated with velocity</h2>
+
+	<div class="example">
+	  <ul class="nav">
+	    <li><a href="#alpha" class="current">Tab Alpha</a></li>
+	    <li><a href="#beta">Tab Beta</a></li>
+	    <li><a href="#gamma">Tab Gamma</a></li>
+	  </ul>
+
+	  <div class="tab-wrap">
+	    <div id="alpha">
+	      <!-- content of tab alpha -->
+				<p>Lorem</p>
+	    </div>
+
+	    <div id="beta">
+	      <!-- content of tab beta -->
+				<p>Impsum</p>
+	    </div>
+
+	    <div id="gamma">
+	      <!-- content of tab gamma -->
+				<p>Dolor</p>
+	    </div>
+	  </div> <!-- END Tab Wrap -->
+	</div> <!-- END rockFluidTabs example -->
+
+	<!-- rockFluidTabs JS -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js'></script>
+  <script src="js/rockFluidTabs.js"></script>
+	<script>
+	  $(function() {
+	    'use strict';
+
+	    $('.example').rockFluidTabs();
+	  });
+	</script>
+	<!-- END rockFluidTabs JS -->
+
+</body>
+</html>

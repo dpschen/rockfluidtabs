@@ -4,161 +4,188 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>rockFluidTabs</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/railscasts.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-	<div id="page-wrap">
+	<h1>rockFluidTabs</h1>
 
-		<h1>rockFluidTabs</h1>
+	<h2>Buttery smooth tabs animated with velocity</h2>
 
-		<p>The purpose of this demo is to show a tabbed area where the content in tabbed panels are
-		of different heights. When we switch between tabs, the content below is gently moved up or down
-		to accomodate.</p>
+  <div class="example-one tabs">
 
-    <div class="example-one">
+  	<ul class="nav">
+      <li><a href="#rockfluid_html" class="current">1. HTML</a></li>
+      <li><a href="#rockfluid_js">2. JS</a></li>
+      <li><a href="#rockfluid_init">3. Init</a></li>
+      <li><a href="#rockfluid_styles">4. Styles</a></li>
+    </ul>
 
-    	<ul class="nav">
-        <li><a href="#featured" class="current">Featured</a></li>
-        <li><a href="#core">Core</a></li>
-        <li><a href="#jquerytuts">jQuery</a></li>
-        <li><a href="#classics">Classics</a></li>
-      </ul>
+  	<div class="tab-wrap">
+			<div id="rockfluid_html">
+				<p>Use this HTML:</p>
+			<pre><code class="html">&lt;div class="example"&gt;
+  &lt;ul class="nav"&gt;
+    &lt;li&gt;&lt;a href="#alpha"&gt;Tab Alpha&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#beta"&gt;Tab Beta&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#gamma"&gt;Tab Gamma&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 
-    	<div class="tab-wrap">
-    		<ul id="featured">
-    			<li><a href="http://css-tricks.com/perfect-full-page-background-image/">Full Page Background Images</a></li>
-    			<li><a href="http://css-tricks.com/designing-for-wordpress-complete-series-downloads/">Designing for WordPress</a></li>
-    			<li><a href="http://css-tricks.com/build-your-own-social-home/">Build Your Own Social Home!</a></li>
-    			<li><a href="http://css-tricks.com/absolute-positioning-inside-relative-positioning/">Absolute Positioning Inside Relative Positioning</a></li>
-    			<li><a href="http://css-tricks.com/ie-css-bugs-thatll-get-you-every-time/">IE CSS Bugs That'll Get You Every Time</a></li>
-    			<li><a href="http://css-tricks.com/404-best-practices/">404 Best Practices</a></li>
-    			<li><a href="http://css-tricks.com/date-display-with-sprites/">Date Display with Sprites</a></li>
-    		</ul>
+  &lt;div class="tab-wrap"&gt;
+    &lt;div id="alpha"&gt;
+      &lt;!-- content of tab alpha --&gt;
+      &lt;p&gt;Lorem&lt;/p&gt;
+    &lt;/div&gt;
 
-				<ul id="core" class="hide">
-					<li><a href="http://css-tricks.com/video-screencasts/58-html-css-the-very-basics/">The VERY Basics of HTML &amp; CSS</a></li>
-					<li><a href="http://css-tricks.com/the-difference-between-id-and-class/">Classes and IDs</a></li>
-					<li><a href="http://css-tricks.com/the-css-box-model/">The CSS Box Model</a></li>
-					<li><a href="http://css-tricks.com/all-about-floats/">All About Floats</a></li>
-					<li><a href="http://css-tricks.com/the-css-overflow-property/">CSS Overflow Property</a></li>
-					<li><a href="http://css-tricks.com/css-font-size/">CSS Font Size - (px - em - % - pt - keyword)</a></li>
-					<li><a href="http://css-tricks.com/css-transparency-settings-for-all-broswers/">CSS Transparency / Opacity</a></li>
-					<li><a href="http://css-tricks.com/css-sprites/">CSS Sprites</a></li>
-					<li><a href="http://css-tricks.com/nine-techniques-for-css-image-replacement/">CSS Image Replacement</a></li>
-					<li><a href="http://css-tricks.com/what-is-vertical-align/">CSS Vertial Align</a></li>
-					<li><a href="http://css-tricks.com/the-css-overflow-property/">The CSS Overflow Property</a></li>
-				</ul>
+    &lt;div id="beta"&gt;
+      &lt;!-- content of tab beta --&gt;
+      &lt;p&gt;Impsum&lt;/p&gt;
+    &lt;/div&gt;
 
-				<ul id="jquerytuts" class="hide">
-					<li><a href="http://css-tricks.com/anythingslider-jquery-plugin/">Anything Slider jQuery Plugin</a></li>
-					<li><a href="http://css-tricks.com/moving-boxes/">Moving Boxes</a></li>
-					<li><a href="http://css-tricks.com/simple-jquery-dropdowns/">Simple jQuery Dropdowns</a></li>
-					<li><a href="http://css-tricks.com/creating-a-slick-auto-playing-featured-content-slider/">Featured Content Slider</a></li>
-					<li><a href="http://css-tricks.com/startstop-slider/">Start/Stop Slider</a></li>
-					<li><a href="http://css-tricks.com/banner-code-displayer-thing/">Banner Code Displayer Thing</a></li>
-					<li><a href="http://css-tricks.com/highlight-certain-number-of-characters/">Highlight Certain Number of Characters</a></li>
-					<li><a href="http://css-tricks.com/auto-moving-parallax-background/">Auto-Moving Parallax Background</a></li>
-				</ul>
+    &lt;div id="gamma"&gt;
+      &lt;!-- content of tab gamma --&gt;
+      &lt;p&gt;Dolor&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt; &lt;!-- END Tab Wrap --&gt;
+&lt;/div&gt; &lt;!-- END rockFluidTabs example --&gt;
+</code></pre>
+			</div>
 
-				<ul id="classics" class="hide">
-					<li><a href="http://css-tricks.com/css-wishlist/">Top Designers CSS Wishlist</a></li>
-					<li><a href="http://css-tricks.com/what-beautiful-html-code-looks-like/">What Beautiful HTML Code Looks Like</a></li>
-					<li><a href="http://css-tricks.com/easily-password-protect-a-website-or-subdirectory/">Easily Password Protect a Website or Subdirectory</a></li>
-					<li><a href="http://css-tricks.com/how-to-create-an-ie-only-stylesheet/">IE-Only Stylesheets</a></li>
-					<li><a href="http://css-tricks.com/ecommerce-considerations/">eCommerce Considerations</a></li>
-					<li><a href="http://css-tricks.com/php-for-beginners-building-your-first-simple-cms/">PHP: Build Your First CMS</a></li>
-				</ul>
+			<div id="rockfluid_js">
+				<p>Add <a href="https://jquery.com/">jQuery</a>, <a href="http://velocityjs.org/">Velocity</a> and rockFluidTabs directly in front of the closing <code>&lt;/body&gt;</code>.</p>
+				<pre><code class="html">&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/rockFluidTabs.js"&gt;&lt;/script&gt;
+</code></pre>
+			</div>
 
-    	</div> <!-- END Tab Wrap -->
+			<div id="rockfluid_init">
+				<p>Call the plugin.</p>
+				<pre><code class="html">&lt;script&gt;
+  $(function() {
+    'use strict';
 
-    </div> <!-- END rockFluidTabs (Example One) -->
+    $('.example').rockFluidTabs();
+  });
+&lt;/script&gt;</code></pre>
+			</div>
 
-		<p>This is a plugin, so you can call it on multiple tabbed areas, which can be styled totally differently</p>
+			<div id="rockfluid_styles">
+				<p>Set the styles you want. For a simple start:</p>
+				<pre><code class="html">&lt;style&gt;
+  .example .nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .example .nav li {
+    flex: 1;
+    margin-left: 10px;
+  }
+  .example .nav li:first-child {
+    margin-left: 0;
+  }
+  .example .nav a {
+    display: block;
+    color: #fff;
+    background: #999;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    transition: all .2s ease;
+  }
+  .example .nav .current {
+    background: #eee;
+    color: #666;
+  }
+  .example .tab-wrap { background: #eee; }
+  .example .tab-wrap div { padding: 20px; }
+&lt;/style&gt;</code></pre>
+			</div>
 
-		<div class="example-two">
+  	</div> <!-- END Tab Wrap -->
+
+  </div> <!-- END rockFluidTabs (Example One) -->
+
+	<p>This is a plugin, so you can call it on multiple tabbed areas, which can be styled totally differently:</p>
+
+	<div class="example-two tabs">
 
 		<ul class="nav">
-			<li class="nav-one"><a href="#featured2" class="current">Featured</a></li>
-			<li class="nav-two"><a href="#core2">Core</a></li>
-			<li class="nav-three"><a href="#jquerytuts2">jQuery</a></li>
-			<li class="nav-four last"><a href="#classics2">Classics</a></li>
-		</ul>
+      <li><a href="#rockfluid_options" class="current"><span>Options</span></a></li>
+      <li><a href="#rockfluid_assumptions"><span>Assumptions</span></a></li>
+    </ul>
 
-		<div class="tab-wrap">
+  	<div class="tab-wrap">
+			<div id="rockfluid_options">
+				<p>You can set options to the tab like this:</p>
+			<pre><code class="js">
+$('.example').rockFluidTabs({
+  // options, defaults listed
 
-			<ul id="featured2">
-				<li><a href="http://css-tricks.com/perfect-full-page-background-image/">Full Page Background Images</a></li>
-				<li><a href="http://css-tricks.com/designing-for-wordpress-complete-series-downloads/">Designing for WordPress</a></li>
-				<li><a href="http://css-tricks.com/build-your-own-social-home/">Build Your Own Social Home!</a></li>
-				<li><a href="http://css-tricks.com/absolute-positioning-inside-relative-positioning/">Absolute Positioning Inside Relative Positioning</a></li>
-				<li><a href="http://css-tricks.com/ie-css-bugs-thatll-get-you-every-time/">IE CSS Bugs That'll Get You Every Time</a></li>
-				<li><a href="http://css-tricks.com/404-best-practices/">404 Best Practices</a></li>
-				<li><a href="http://css-tricks.com/date-display-with-sprites/">Date Display with Sprites</a></li>
-			</ul>
+  speed: 400,
+  // speed in ms
 
-			<ul id="core2" class="hide">
-	      <li><a href="http://css-tricks.com/video-screencasts/58-html-css-the-very-basics/">The VERY Basics of HTML &amp; CSS</a></li>
-	      <li><a href="http://css-tricks.com/the-difference-between-id-and-class/">Classes and IDs</a></li>
-	      <li><a href="http://css-tricks.com/the-css-box-model/">The CSS Box Model</a></li>
-	      <li><a href="http://css-tricks.com/all-about-floats/">All About Floats</a></li>
-	      <li><a href="http://css-tricks.com/the-css-overflow-property/">CSS Overflow Property</a></li>
-				<li><a href="http://css-tricks.com/css-font-size/">CSS Font Size - (px - em - % - pt - keyword)</a></li>
-				<li><a href="http://css-tricks.com/css-transparency-settings-for-all-broswers/">CSS Transparency / Opacity</a></li>
-				<li><a href="http://css-tricks.com/css-sprites/">CSS Sprites</a></li>
-				<li><a href="http://css-tricks.com/nine-techniques-for-css-image-replacement/">CSS Image Replacement</a></li>
-				<li><a href="http://css-tricks.com/what-is-vertical-align/">CSS Vertial Align</a></li>
-				<li><a href="http://css-tricks.com/the-css-overflow-property/">The CSS Overflow Property</a></li>
-			</ul>
+  easing: 'easeInOutQuart',
+  // use one of the velocity easings http://velocityjs.org/#easing
 
-			<ul id="jquerytuts2" class="hide">
-				<li><a href="http://css-tricks.com/anythingslider-jquery-plugin/">Anything Slider jQuery Plugin</a></li>
-				<li><a href="http://css-tricks.com/moving-boxes/">Moving Boxes</a></li>
-				<li><a href="http://css-tricks.com/simple-jquery-dropdowns/">Simple jQuery Dropdowns</a></li>
-				<li><a href="http://css-tricks.com/creating-a-slick-auto-playing-featured-content-slider/">Featured Content Slider</a></li>
-				<li><a href="http://css-tricks.com/startstop-slider/">Start/Stop Slider</a></li>
-				<li><a href="http://css-tricks.com/banner-code-displayer-thing/">Banner Code Displayer Thing</a></li>
-				<li><a href="http://css-tricks.com/highlight-certain-number-of-characters/">Highlight Certain Number of Characters</a></li>
-				<li><a href="http://css-tricks.com/auto-moving-parallax-background/">Auto-Moving Parallax Background</a></li>
-			</ul>
+  nav: '.nav',
+  // define selector for navigation
 
-			<ul id="classics2" class="hide">
-				<li><a href="http://css-tricks.com/css-wishlist/">Top Designers CSS Wishlist</a></li>
-				<li><a href="http://css-tricks.com/what-beautiful-html-code-looks-like/">What Beautiful HTML Code Looks Like</a></li>
-				<li><a href="http://css-tricks.com/easily-password-protect-a-website-or-subdirectory/">Easily Password Protect a Website or Subdirectory</a></li>
-				<li><a href="http://css-tricks.com/how-to-create-an-ie-only-stylesheet/">IE-Only Stylesheets</a></li>
-				<li><a href="http://css-tricks.com/ecommerce-considerations/">eCommerce Considerations</a></li>
-				<li><a href="http://css-tricks.com/php-for-beginners-building-your-first-simple-cms/">PHP: Build Your First CMS</a></li>
-			</ul>
+  currentClass: '.current'
+  // define current class of the navigation
 
-		 </div> <!-- END Tab Wrap -->
+  tabWrap: '.tab-wrap',
+  // define selector for wrapper of tabs
+});
+</code></pre>
+			</div>
 
-		</div> <!-- END rockFluidTabs (Example two) -->
+			<div id="rockfluid_assumptions">
+				<p>This script makes almost no assumptions about the styling of your tabs. You are free to use the basic styling given in the example.</p>
+			</div>
 
-		<p>This is some content below the tabs. I will be moved up or down to accommodate the tabbed area above me.</p>
+  	</div> <!-- END Tab Wrap -->
 
-		<p>This Plugin needs <a href="https://jquery.com/">jQuery</a> and <a href="http://velocityjs.org/">Velocity</a></p>
+	</div> <!-- END rockFluidTabs (Example two) -->
 
-	</div>
+	<p>This is some content below the tabs. I will be moved up or down to accommodate the tabbed area above me.</p>
+	<p>By Dominik Pschenitschni | <a href="https://pschen.de">pschen.de</a></p>
+	<p>Based on <a href="https://github.com/CSS-Tricks/jQuery-Organic-Tabs">jQuery-Organic-Tabs</a> by Chris Coyier</p>
 
+	<a href="https://github.com/dpschen/rockfluidtabs" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#2e505c; color:#c3b6a3; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+	<!-- highlight JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- END highlight JS -->
+
+
+	<!-- rockFluidTabs JS -->
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js'></script>
   <script src="js/rockFluidTabs.js"></script>
   <script>
     $(function() {
 			'use strict';
-			$(".example-one").rockFluidTabs({
-				speed: 400
+			// basic example
+			$('.example-one').rockFluidTabs();
 
-			});
-      $(".example-two").rockFluidTabs({
+			// with custom easing
+      $('.example-two').rockFluidTabs({
 				speed: 800,
         easing: [500, 20]
       });
     });
   </script>
+	<!-- END rockFluidTabs JS -->
+
 </body>
 </html>
