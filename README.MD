@@ -1,6 +1,6 @@
 # [rockFluidTabs](https://rockfluidtabs.pschen.de/)
 
-__Buttery smooth tabs animated with velocity__
+> Buttery smooth tabs animated with velocity
 
 I was searching for a tab library with a high frame rate and couldn't find any that I perfectly liked.
 So I made one by implementing [Velocity](http://julian.com/research/velocity/) in jQuery-Organic-Tabs.
