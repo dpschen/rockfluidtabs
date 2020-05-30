@@ -1,4 +1,6 @@
-# [rockFluidTabs](https://rockfluidtabs.pschen.de/)
+# [rockFluidTabs](https://rockfluidtabs.pschen.de/) – Outdated
+
+__This tabs library is outdated. Usage not recommended anymore__
 
 > Buttery smooth tabs animated with velocity
 
